@@ -277,5 +277,5 @@ if __name__ == "__main__":
     for idx, new_pos in enumerate(actions):
         render_cls.update_movement(new_pos, idx+1)
 
-    render_cls.save_gif(0)
+    render_cls.save_gif()
     render_cls.viewer.close()

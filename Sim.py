@@ -253,11 +253,8 @@ class Simulator:
 if __name__ == "__main__":
 
     sim = Simulator()
-    print('start read file')
     files = pd.read_csv("./data/factory_order_train.csv")
-    print('end read file')
-
-
+   
     for epi in range(2): # len(files)):
         items = list(files.iloc[epi])[0]
         done = False
@@ -265,7 +262,6 @@ if __name__ == "__main__":
         obs = sim.reset(epi)
         actions = [0, 0, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 1]
 
-        print('start while')
         while done == False:
             
             i += 1
@@ -275,7 +271,6 @@ if __name__ == "__main__":
 
             if (done == True) or (i == (len(actions)-1)):
                 i =0
-        print('end while')
 
 
             
